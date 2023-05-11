@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+html {
+    font-size: 62.5%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(#dbb2fc, #f1f1f1);
+    min-height: 100vh;
+}
+
+.faded {
+    position: relative;
+    height: auto;
+    text-align: center;
+    margin: .8rem auto;
+    width: 70%;
+    border-radius: 8px;
+    background: linear-gradient(to right, #dbb2fc, white);
+    transition: all ease .3s;
+}
+
+.faded::after {
+    content: '';
+    position: absolute;
+    margin: auto;
+    border-radius: 8px;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    height: auto;
+    opacity: 0;
+    background: white;
+    transition: all ease .3s;
+}
+
+.faded:hover::after {
+    opacity: 1;
+}
+
+.faded:hover {
+    width: 71%;
+}
+
+.faded a {
+    all: unset;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    padding: 20px 20px;
+    font-size: 1.8rem;
+    display: inline-block;
+    z-index: 2;
+}
+
+.faded a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.faded a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+`
